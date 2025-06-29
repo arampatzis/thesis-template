@@ -1,0 +1,267 @@
+\documentclass[english]{thesis-uoc} 
+
+\usepackage{lipsum}
+
+\addbibresource{references.bib}
+
+\thesistitle{Learning Representations with Physics Constraints}
+\studentname{Maria Papadaki}
+\supervisor{Prof. A. Einstein}
+\thesisdate{June 2025}
+\thesislogo{uoc.pdf}
+
+\begin{document}
+
+\maketitle
+
+\acknowledgments
+Thanks to my cat.
+
+\dedication{To my dog.}
+
+\committeesection{
+Prof. A. Einstein, Chair\\
+Prof. B. Heisenberg\\
+Dr. C. Schrodinger
+}
+
+\abstractsection
+\lipsum[1]
+
+\chapter{Package Demonstration}
+\label{chap:demo}
+
+This chapter demonstrates the mathematical and typographical capabilities built into 
+the thesis class.
+
+\section{Mathematical Notation}
+
+\subsection{Basic Mathematics}
+
+The fundamental theorem of calculus states that if $f$ is continuous on $[a,b]$ and $F$ 
+is an antiderivative of $f$, then:
+%
+\begin{equation}
+\label{eq:ftc}
+\int_a^b f(x) \dif x = F(b) - F(a)
+\end{equation}
+%
+
+\subsection{Vectors and Bold Mathematics}
+
+Let $\bm{x} = (x_1, x_2, \ldots, x_n)^T$ be a vector in $\mathbb{R}^n$. 
+The gradient of a function 
+$f: \mathbb{R}^n \to \mathbb{R}$ is denoted as $\vv{\nabla} f(\bm{x})$ or 
+$\nabla f(\bm{x})$.
+
+For machine learning, we often work with:
+%
+\begin{align}
+\bm{W} &\in \mathbb{R}^{m \times n} \quad \text{(weight matrix)}\\
+\bm{b} &\in \mathbb{R}^m \quad \text{(bias vector)}\\
+\bm{y} &= \bm{W}\bm{x} + \bm{b} \quad \text{(linear transformation)}
+\end{align}
+
+\subsection{Calculus and Differentials}
+%
+The total differential of a function $f(x,y)$ is:
+%
+\begin{equation}
+\dif f = \dpd{f}{x} \dif x + \dpd{f}{y} \dif y
+\end{equation}
+
+For partial derivatives, we use:
+%
+\begin{equation}
+\frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} = \nabla^2 f
+\end{equation}
+
+\subsection{Optimization Operators}
+
+The thesis class includes predefined mathematical operators for optimization:
+%
+\begin{align}
+\bm{x}^* &= \argmax_{\bm{x} \in \mathcal{X}} f(\bm{x}) \\
+\bm{w}^* &= \argmin_{\bm{w}} \| \bm{y} - \bm{Xw} \|^2 + \lambda \| \bm{w} \|^2
+\end{align}
+
+These operators automatically handle proper spacing and formatting in optimization problems.
+
+\subsection{Probability and Statistics}
+
+The thesis class includes flexible commands for probability and statistics notation:
+
+\subsubsection{Basic Probability Notation}
+Working with probability spaces and distributions:
+%
+\begin{align}
+X &\sim \Normal(\mu, \sigma^2) \quad \text{(normal distribution)} \\
+Y &\sim \Uniform(a, b) \quad \text{(uniform distribution)} \\
+Z &\in \Real \quad \text{(real-valued random variable)}
+\end{align}
+
+\subsubsection{Expectation Operator}
+The \verb|\Mean| command adapts to different contexts:
+%
+\begin{align}
+\Mean &\quad \text{(plain expectation symbol)} \\
+\Mean[X] &\quad \text{(expectation w.r.t. X)} \\
+\Mean[X][Y] &= \mathbb{E}_X \left[ Y \right] \quad \text{(expectation of Y w.r.t. X)} \\
+\Mean[\mu][X^2] &= \mathbb{E}_\mu \left[ X^2 \right] \quad \text{(second moment)}
+\end{align}
+
+\subsubsection{Probability Operator}
+The \verb|\Prob| command works similarly:
+%
+\begin{align}
+\Prob &\quad \text{(plain probability symbol)} \\
+\Prob[X] &\quad \text{(probability w.r.t. X)} \\
+\Prob[X][A] &= \mathbb{P}_X \left( A \right) \quad \text{(probability of event A)} \\
+\Prob[\mu][X > 0] &= \mathbb{P}_\mu \left( X > 0 \right) \quad \text{(conditional probability)}
+\end{align}
+
+\subsubsection{Variance Operator}
+The \verb|\Var| command for variance calculations:
+%
+\begin{align}
+\Var &\quad \text{(plain variance symbol)} \\
+\Var[X] &\quad \text{(variance w.r.t. X)} \\
+\Var[X][Y] &= \mathbb{V}_X \left[ Y \right] \quad \text{(variance of Y w.r.t. X)} \\
+\Var[\theta][X] &= \mathbb{V}_\theta \left[ X \right] \quad \text{(parametric variance)}
+\end{align}
+
+\subsubsection{Combined Example}
+A typical machine learning probability statement:
+%
+\begin{equation}
+\Mean[\theta][\ell(X, Y)] = \Mean[\theta]\left[ \Prob[X,Y][Y \neq f_\theta(X)] \right]
+\end{equation}
+%
+where $\ell$ is the loss function and $f_\theta$ is our model.
+
+\subsection{Special Sets and Greek Letters}
+We work with various mathematical sets:
+%
+\begin{itemize}
+\item Natural numbers: $\mathbb{N} = \{1, 2, 3, \ldots\}$
+\item Real numbers: $\mathbb{R}$
+\item Complex numbers: $\mathbb{C}$
+\item Probability space: $(\Omega, \mathcal{F}, \mathbb{P})$
+\end{itemize}
+%
+
+Greek letters in upright form: $\uppi \approx 3.14159$, $e = 2.71828$.
+
+\subsection{Theorems and Proofs}
+
+\begin{theorem}[Pythagorean Theorem]
+\label{thm:pythagoras}
+In a right triangle with legs of length $a$ and $b$, and hypotenuse of length $c$, 
+we have:
+%
+\begin{equation}
+a^2 + b^2 = c^2
+\end{equation}
+%
+\end{theorem}
+
+\begin{proof}
+The proof is left as an exercise for the reader.
+\end{proof}
+
+\section{Cross-References}
+
+This section demonstrates smart referencing with cleveref.
+We can reference \cref{eq:ftc},  \cref{thm:pythagoras}, and \cref{chap:demo}
+automatically.
+
+Multiple references work too: 
+\cref{eq:ftc,thm:pythagoras} show different mathematical concepts.
+Use \texttt{cref} in the middle of the sentence and \texttt{Cref} at the beginning.
+
+\section{Citations}
+
+Mathematical typesetting follows the principles established by \cite{knuth1984}, 
+while modern computational approaches build on \cite{lecun2015}.
+
+\section{Tables and Figures}
+
+\subsection{Professional Tables with Booktabs}
+
+Here's a professional table using the booktabs package:
+
+\begin{table}[htbp]
+\centering
+\caption{Comparison of Machine Learning Models}
+\label{tab:models}
+\begin{tabular}{lcc}
+\toprule
+Model & Accuracy (\%) & Training Time (min) \\
+\midrule
+Linear Regression & 78.5 & 2.3 \\
+Random Forest & 85.2 & 15.7 \\
+Neural Network & 92.1 & 120.4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Colored Tables}
+
+Using \texttt{xcolor} and \texttt{colortbl} packages for enhanced presentations:
+
+\begin{table}[htbp]
+\centering
+\caption{Performance Metrics with Color Coding}
+\begin{tabular}{l>{\columncolor{lightgray}}cc}
+\toprule
+Method & \textcolor{blue}{Precision} & \textcolor{red}{Recall} \\
+\midrule
+Baseline & 0.75 & 0.68 \\
+\rowcolor{yellow!20}
+Our Method & \textbf{0.89} & \textbf{0.91} \\
+State-of-art & 0.82 & 0.85 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Subfigures and Enhanced Captions}
+
+The subcaption package allows for complex figure arrangements:
+
+\begin{figure}[htbp]
+\centering
+\subcaptionbox{Training Loss\label{fig:loss}}{%
+  \textcolor{blue}{\rule{4cm}{3cm}}%
+}
+\hspace{1cm}
+\subcaptionbox{Validation Accuracy\label{fig:acc}}{%
+  \textcolor{red}{\rule{4cm}{3cm}}%
+}
+\caption{Training Progress: \subref{fig:loss} shows decreasing loss while 
+\subref{fig:acc} shows improving accuracy}
+\label{fig:training}
+\end{figure}
+
+\subsection{Colors and Typography}
+
+The \texttt{xcolor} package enables rich text formatting:
+
+\begin{itemize}
+\item \textcolor{red}{Important warnings} can be highlighted
+\item \textcolor{blue}{Key concepts} stand out  
+\item \textcolor{green!70!black}{Success indicators} provide feedback
+\item \colorbox{yellow}{Highlighted text} draws attention
+\end{itemize}
+
+Mathematical expressions can also use colors:
+\begin{equation}
+    \textcolor{blue}{\bm{W}} \textcolor{red}{\bm{x}} + \textcolor{green}{\bm{b}} = 
+    \textcolor{purple}{\bm{y}}
+\end{equation}
+
+Note: The \texttt{parskip} package automatically improves paragraph spacing throughout 
+the document.
+
+\printbibliography
+
+\end{document}
