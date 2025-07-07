@@ -1,0 +1,167 @@
+{
+    "Figures": {
+        "prefix": "figs",
+        "body": [
+            "\\begin{figure}[htbp]",
+            "\t\\centering",
+            "\t\\begin{subfigure}{0.3\\textwidth}",
+            "\t\t\\centering",
+            "\t\t\\includegraphics[width=\\textwidth]{${1:image1.png}}",
+            "\t\t\\caption{${2:Caption 1}}",
+            "\t\t\\label{fig:${3:label1}}",
+            "\t\\end{subfigure}",
+            "\t\\hfill",
+            "\t\\begin{subfigure}{0.3\\textwidth}",
+            "\t\t\\centering",
+            "\t\t\\includegraphics[width=\\textwidth]{${4:image2.png}}",
+            "\t\t\\caption{${5:Caption 2}}",
+            "\t\t\\label{fig:${6:label2}}",
+            "\t\\end{subfigure}",
+            "\t\\caption{${7:Overall caption}}",
+            "\t\\label{fig:${8:overall_label}}",
+            "\\end{figure}"
+        ]
+    },
+    "Table": {
+        "prefix": "tab",
+        "body": [
+            "\\begin{table}[H]",
+            "\t\\centering",
+            "\t\\begin{tabular}{${1:ccc}}",
+            "\t\t\\toprule",
+            "\t\ta & b & c \\\\\\ \\midrule",
+            "\t\t1 & 2 & 3 \\\\\\",
+            "\t\t\\bottomrule",
+            "\t\\end{tabular}",
+            "\t\\caption{${2:caption}\\label{tab:${3:sample}}}",
+            "\\end{table}",
+            "$0"
+        ],
+        "description": "Include \\usepackage{booktabs}."
+    },
+    "Left Right Parenthesis": {
+        "prefix": "lrp",
+        "body": [
+            "\\left( $0 \\right)",
+        ]
+    },
+    "Left Right Square Brackets": {
+        "prefix": "lrb",
+        "body": [
+            "\\left[ $0 \\right]",
+        ]
+    },
+    "Left Right Square Braces": {
+        "prefix": "lrbr",
+        "body": [
+            "\\left\\{ $0 \\right\\\\}",
+        ]
+    },
+    "Equation Environment": {
+        "prefix": "eq",
+        "body": [
+            "%",
+            "\\begin{equation}",
+            "\t$0",
+            "\\end{equation}",
+            "%"
+        ]
+    },
+    "Align Environment": {
+        "prefix": "align",
+        "body": [
+            "%",
+            "\\begin{align}",
+            "\t$0",
+            "\\end{align}",
+            "%"
+        ]
+    },
+    "Gather Environment": {
+        "prefix": "gather",
+        "body": [
+            "%",
+            "\\begin{gather}",
+            "\t$0",
+            "\\end{gather}",
+            "%"
+        ]
+    },
+    "Split Environment": {
+        "prefix": "split",
+        "body": [
+            "\\begin{split}",
+            "\t$0",
+            "\\end{split}",
+        ]
+    },
+    "Sum Up To N": {
+        "prefix": "sumn",
+        "body": [
+            "\\sum_{i=1}^{n} $0",
+        ]
+    },
+    "Set": {
+        "prefix": "set",
+        "body": [
+            "\\{$0\\\\}",
+        ]
+    },
+    "Set up to N": {
+        "prefix": "setn",
+        "body": [
+            "\\{ $0 \\\\}_{i=1}^{n}",
+        ]
+    },
+    "Bold Math": {
+        "prefix": "bm",
+        "body": [
+            "\\bm{$0}",
+        ]
+    },
+    "Hat Math": {
+        "prefix": "hat",
+        "body": [
+            "\\hat{$0}",
+        ]
+    },
+    "Question": {
+        "prefix": "question",
+        "body": [
+            "\\begin{question}{}",
+            "%",
+            "$0",
+            "%",
+            "\\end{question}{}",
+            "",
+        ]
+    },
+    "Subquestion": {
+        "prefix": "subquestion",
+        "body": [
+            "\\begin{subquestion}",
+            "%",
+            "$0",
+            "%",
+            "\\end{subquestion}",
+            "",
+        ]
+    },
+    "Solution": {
+        "prefix": "solution",
+        "body": [
+            "\\begin{solution}",
+            "%",
+            "$0",
+            "%",
+            "\\end{solution}",
+            "",
+        ]
+    },
+    "Underline": {
+        "prefix": "underline",
+        "body": [
+            "\\underline{$0}",
+        ]
+    }
+}
